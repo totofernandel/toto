@@ -1,0 +1,11 @@
+#!/usr/bin/env python3.5
+import sys
+count = 0
+words = '/usr/share/dict/words'
+with open(words) as f:
+    for line in f:
+        word = line.strip()
+        if len(word) == int(sys.argv[1]):
+            print(word)
+            count += 1
+print ("%s total count" % count)
